@@ -49,7 +49,7 @@ const submitBtn = document.getElementById('submit-button');
     }
     else{
         missMatched.style.display = 'block';
-        
+
         document.getElementById('generate-pin-display').value = "";
         document.getElementById('input-display').value = ""; 
     }
@@ -59,10 +59,10 @@ const submitBtn = document.getElementById('submit-button');
     const tryLeftCount = parseInt(tryLeft.innerText);
     const newTryLeft = tryLeftCount - 1;
    
-    if(tryLeftCount > 0){
+    if(tryLeftCount > 0 && pinInputDisplay != generateDisplay){
         tryLeft.innerText = newTryLeft; 
     }
-    if(tryLeftCount == 0){
+    if(tryLeftCount == 0 && pinInputDisplay != generateDisplay){
         let mainBody = document.getElementById('main-body');
         mainBody.style.display = 'none';
         pinMatched.style.display = 'none';
